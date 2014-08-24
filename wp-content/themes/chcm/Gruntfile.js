@@ -58,7 +58,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     sassDir: 'sass',
-                    cssDir: '',
+                    cssDir: './',
                     imagesDir: 'images',
                     images: 'images',
                     javascriptsDir: 'js',
@@ -88,8 +88,18 @@ module.exports = function(grunt) {
                     '<%= jshint.all %>'
                 ],
                 tasks: ['jshint', 'uglify']
+            },
+             php: {
+               files: [
+                    '*.php',
+                    '**/*.php'
+               ],
+             },
+            options: {
+              livereload: true,
+              spawn: false
             }
-        }
+        },
     });
 
     // load tasks

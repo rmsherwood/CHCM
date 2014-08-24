@@ -510,3 +510,11 @@ require get_template_directory() . '/inc/customizer.php';
 if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
 	require get_template_directory() . '/inc/featured-content.php';
 }
+
+
+/* Attempt to add livereload to port 35729 */
+
+if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
+  wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
+  wp_enqueue_script('livereload');
+}
