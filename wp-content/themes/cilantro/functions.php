@@ -38,7 +38,7 @@ function cilantro_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -58,14 +58,14 @@ function cilantro_setup() {
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
+		'aside'
 	) );
 
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'cilantro_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	// // Setup the WordPress core custom background feature.
+	// add_theme_support( 'custom-background', apply_filters( 'cilantro_custom_background_args', array(
+	// 	'default-color' => 'ffffff',
+	// 	'default-image' => '',
+	// ) ) );
 }
 endif; // cilantro_setup
 add_action( 'after_setup_theme', 'cilantro_setup' );
@@ -94,6 +94,12 @@ add_action( 'widgets_init', 'cilantro_widgets_init' );
 function cilantro_scripts() {
 	wp_enqueue_style( 'cilantro-style', get_stylesheet_uri() );
 
+	wp_enqueue_style('cilantro-content-sidebar', get_template_directory_uri() . '/layouts/content-sidebar.css');
+
+	wp_enqueue_style('cilantro-google-fonts','http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic');
+
+	wp_enqueue_style('cilantro-font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
 	wp_enqueue_script( 'cilantro-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'cilantro-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -107,7 +113,7 @@ add_action( 'wp_enqueue_scripts', 'cilantro_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
