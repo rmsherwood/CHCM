@@ -42,3 +42,4 @@ wp-content/themes/chcm/node_modules/
 
 #Ignore Sass cache
 wp-content/themes/chcm/.sass-cache
+/nbproject/private/
