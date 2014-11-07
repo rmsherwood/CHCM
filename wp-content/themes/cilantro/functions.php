@@ -22,6 +22,10 @@ if ( ! function_exists( 'cilantro_setup' ) ) :
  */
 function cilantro_setup() {
 
+	// This theme styles the visual editor to resemble the theme style.
+	$font_url = 'http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic';
+	add_editor_style( array( 'inc/editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
+	
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -107,7 +111,11 @@ add_action( 'widgets_init', 'cilantro_widgets_init' );
 function cilantro_scripts() {
 	wp_enqueue_style( 'cilantro-style', get_stylesheet_uri() );
 
-	wp_enqueue_style('cilantro-content-sidebar', get_template_directory_uri() . '/layouts/content-sidebar.css');
+	if (is_page_template('page-templates/page-nosidebar.php')) {
+	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/no-sidebar.css');
+	} else {
+	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/content-sidebar.css');
+	}
 
 	wp_enqueue_style('cilantro-google-fonts','http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic');
 

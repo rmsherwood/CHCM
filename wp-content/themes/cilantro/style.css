@@ -1043,6 +1043,9 @@ input[type="search"] {
   color: #000;
   color: black; }
 
+.page .entry-title {
+  margin-top: .7em; }
+
 .entry-content a {
   text-decoration: underline; }
 
