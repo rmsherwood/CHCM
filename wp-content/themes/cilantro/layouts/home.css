@@ -1,0 +1,164 @@
+
+/*
+Theme Name: cilantro
+Layout: No sidebar
+*/
+
+.page .site-content { 
+    background: #fff; 
+    background: hsl(0, 0%, 100%);
+}
+
+.site-footer {
+    clear: both;
+    width: 100%;
+}
+
+.entry-header,
+.page-header,
+.entry-content,
+.entry-footer,
+.tag-links,
+.post-navigation,
+.comments-area,
+.paging-navigation {
+    position: relative;
+/*    max-width: 1170px;
+    max-width: 117rem;
+    padding: 0 4rem;  */
+    margin: 0 auto;
+}
+
+.page-header,
+.paging-navigation {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    list-style-type: none;
+    background: #fff;
+}
+
+.page-header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.entry-title {
+    display:none;
+}
+
+#main{
+    padding-top: 3rem;
+}
+
+.site-branding{
+    padding: 3rem 0;
+}
+.title-box{
+    width: 940px;
+}
+
+.site-description{
+    font-size: 3rem;
+    line-height: 4.8rem;
+}
+
+.description-background{
+    background-color: rgba(50,180,74,0.8);
+    padding: 5px 0;
+    box-shadow: 10px 0 0 rgba(50,180,74,0.8),-10px 0 0 rgba(50,180,74,0.8);
+
+
+
+}
+
+.logo{
+    display:block;
+    margin: 0 auto 2rem auto;
+}
+
+.header-background-image .title-box{
+    background: transparent;
+    border: none;
+}
+
+.header-background-image{
+    background-position: center;
+}
+
+
+.core-item-list{
+    margin: 0 auto;
+}
+.core-item-list:after  {
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+
+
+}
+
+.content-container{
+    padding: 0 5%;
+}
+
+
+
+.core-item{
+    float:left;
+    width: 28rem;
+    margin: 2rem 5.5rem;
+    text-align: center;
+}
+
+.core-item:first-child {
+    margin-left: 0px;
+}
+
+.core-item:last-child {
+    margin-right: 0px;
+}
+
+xcore-item:last-child:after  {
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+
+}
+
+.core-item img{
+    margin: 0 auto;
+
+}
+
+.core-item h3{
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    display: inline;
+    margin: 0;
+}
+
+.core-item p{
+
+}
+
+.map{
+    width: 100%;
+
+}
+
+.map-message{
+    padding: 2rem 5%;
+    background-color: rgba(50,180,74,0.8);
+    text-align:center;
+}
+
+.map-message h2{
+    color: white;
+    font-weight: 400;
+}

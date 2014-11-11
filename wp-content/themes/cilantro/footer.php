@@ -15,9 +15,7 @@
 		<?php get_sidebar('footer'); ?>
 
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'cilantro' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'cilantro' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'cilantro' ), 'cilantro', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

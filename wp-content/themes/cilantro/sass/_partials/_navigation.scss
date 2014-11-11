@@ -34,8 +34,8 @@ a:active {
     clear: both;
     font-family: $base-font-family;
     text-transform: uppercase;
-    background: #313131;
-    background: hsl(0, 0%, 19%);
+    background: $green;
+    background: $green-hsl;
 }
 .main-navigation ul {
     list-style: none;
@@ -63,8 +63,8 @@ a:active {
     display: none;
     float: left;
     padding: 0;
-    background: #4d4d4d;
-    background: hsl(0, 0%, 30%);
+    background: $green-medium;
+    background: $green-medium-hsl;
 }
 .main-navigation ul ul ul {
 	left: 100%;
@@ -78,14 +78,14 @@ a:active {
 .main-navigation li:hover > a {
     color: #fff;
     color: hsl(0, 0%, 100%);
-    background: #4d4d4d;
-    background: hsl(0, 0%, 30%);
+    background: $green-medium;
+    background: $green-medium-hsl;
 }
 .main-navigation ul ul :hover > a {
 }
 .main-navigation ul ul a:hover {
-    background: #313131;
-    background: hsl(0, 0%, 19%);
+    background: $green;
+    background: $green-hsl;
 }
 .main-navigation ul li:hover > ul {
 	display: block;
@@ -95,21 +95,21 @@ a:active {
 .main-navigation .current_page_item > a:hover,
 .main-navigation .current-menu-item > a:hover {
     background: white;
-    color: #313131;
-    color: hsl(0, 0%, 19%);
+    color: $green;
+    color: $green-hsl;
 }
 
 .main-navigation .current_page_ancestor {
-    background: #4d4d4d;
-    background: hsl(0, 0%, 30%);
+    background: $green-medium;
+    background: $green-medium-hsl;
 }
 
 .main-navigation ul ul .current_page_parent,
 .main-navigation .current_page_parent .current_page_item > a {
     color: #fff;
     color: hsl(0, 0%, 100%);
-    background: #313131;
-    background: hsl(0, 0%, 19%);
+    background: $green;
+    background: $green-hsl;
 } 
 /* Small menu */
 .menu-toggle {
@@ -126,7 +126,7 @@ a:active {
             font-size: 1.4rem;
             text-decoration: none;
             line-height: 3.75em;
-            background: #303030;
+            background: $green;
             color: white;
 
     }
@@ -160,8 +160,8 @@ a:active {
     }
 
     .main-navigation li:hover > a {
-        background: #313131;
-        background: hsl(0, 0%, 19%);
+        background: $green;
+        background: $green-hsl;
     }
     
     .main-navigation ul ul,
@@ -171,16 +171,16 @@ a:active {
         left: 0;
         display: block;
         float: none;
-        background: #313131;
-        background: hsl(0, 0%, 19%);
+        background: $green;
+        background: $green-hsl;
     }
     
     .main-navigation ul ul a { width: 100%; }
 
     .main-navigation ul a:hover,
     .main-navigation ul ul a:hover {
-        background: #4d4d4d;
-        background: hsl(0, 0%, 30%);
+        background: $green-dark;
+        background: $green-dark-hsl;
     }
 
     .main-navigation .current_page_ancestor { background: inherit; }
@@ -196,8 +196,8 @@ a:active {
     .main-navigation .current_page_parent .current_page_item > a  {
         color: #fff;
         color: hsl(0, 0%, 100%);
-        background: #4d4d4d;
-        background: hsl(0, 0%, 30%);    
+        background: $green-dark;
+        background: $green-dark-hsl;    
     }
         
    

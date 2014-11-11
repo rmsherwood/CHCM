@@ -134,8 +134,8 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    background: #000;
-    background: hsl(0, 0%, 0%);
+    background: $green-dark;
+    background: $green-dark-hsl;
 }
 button:focus,
 input[type="button"]:focus,
@@ -145,8 +145,8 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-    background: #000;
-    background: hsl(0, 0%, 0%);
+    background: $green-dark;
+    background: $green-dark-hsl;
 }
 input[type="checkbox"],
 input[type="radio"] {

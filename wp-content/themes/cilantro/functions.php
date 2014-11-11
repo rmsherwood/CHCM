@@ -113,7 +113,11 @@ function cilantro_scripts() {
 
 	if (is_page_template('page-templates/page-nosidebar.php')) {
 	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/no-sidebar.css');
-	} else {
+	} 
+		elseif (is_page_template('page-templates/home.php')) {
+	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/home.css');
+	}
+	else {
 	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/content-sidebar.css');
 	}
 

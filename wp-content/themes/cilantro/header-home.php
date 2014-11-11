@@ -42,10 +42,6 @@
 
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'cilantro' ); ?></a>
 
-	<?php if( is_home() || is_front_page() ) :?>  
-
-	<!--Only displays header on homepage -->
-
 	<header id="masthead" class="site-header" role="banner">
 
 		<?php if ( get_header_image() && ('blank' == get_header_textcolor()) ) : ?>
@@ -72,11 +68,7 @@
 			</div>
 		</div>
 
+
 	</header><!-- #masthead -->
-
-	<?php endif; // End home.php template check. ?>
-
-
-
 
 	<div id="content" class="site-content">

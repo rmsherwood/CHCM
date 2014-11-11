@@ -91,8 +91,8 @@
 
 .search-toggle:hover,
 .search-toggle.active {
-    background: #4d4d4d;
-    background: hsl(0, 0%, 30%);
+    background: $green-dark;
+    background: $green-dark-hsl;
 }
 
 @media screen and (max-width: 600px) {
@@ -118,8 +118,8 @@ input[type="search"] {
 
 .search-box {
     padding: 1em;
-    background: #4d4d4d;
-    background: hsl(0, 0%, 30%);
+    background: $green-dark;
+    background: $green-dark-hsl;
 }
 
 .search-box .search-field {

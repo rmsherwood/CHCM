@@ -26,8 +26,8 @@ function cilantro_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'cilantro_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => 'ffffff',
-		'width'                  => 1280,
-		'height'                 => 300,
+		'width'                  => 1500,
+		'height'                 => 1116,
 		'flex-height'            => false,
 		'wp-head-callback'       => 'cilantro_header_style',
 		'admin-head-callback'    => 'cilantro_admin_header_style',
