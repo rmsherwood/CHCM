@@ -7,7 +7,7 @@
 --------------------------------------------------------------*/
 
 .site-footer {
-    padding: 2em;
+    padding: 2em 80px;
     font-family: $base-font-family;
     font-size: $base-font-size;
     font-size: 1.6rem;
@@ -23,11 +23,13 @@
 }
 
 .site-info { 
-    text-align: center; 
+    text-align: left; 
+    float: left;
 }
 
-
-
+ul#menu-social-icons{
+    background-color: transparent;
+}
 
 /* Footer widgets responsive */
 @media screen and (max-width: 879px) {

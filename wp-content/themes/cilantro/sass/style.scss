@@ -111,31 +111,35 @@ textarea {
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 	*vertical-align: middle; /* Improves appearance and consistency in IE6/IE7 */
+	border:none;
 }
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    padding: 1em 2em;
-    font-size: 16px;
-    font-size: 1.6rem;
+    padding: .3em .6em;
+    font-size: 22px;
+    font-size: 2.2rem;
     font-family: $base-font-family;
     text-transform: uppercase;
-    line-height: 1;
+    line-height: 1.2;
     color: hsl(0, 0%, 100%);
-    background: #3c3c3c;
-    background: hsl(0, 0%, 24%);
-    border: none;
-    border-radius: 3px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
     cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
     -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+    @include transition-property(color, background, border);
+	@include transition-duration(0.25s);
 }
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    background: $green-dark;
-    background: $green-dark-hsl;
+	color: $green-dark;
+	border: 2px solid $green-dark;
+    @include transition-property(color, border);
+	@include transition-duration(0.25s);
 }
 button:focus,
 input[type="button"]:focus,
@@ -145,8 +149,10 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-    background: $green-dark;
-    background: $green-dark-hsl;
+	color: $green-dark;
+	border: 2px solid $green-dark;
+    @include transition-property(color, border);
+	@include transition-duration(0.25s);
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -172,10 +178,14 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-    padding: 8px;
-    font-family: 'Lato', sans-serif;
-    color: #333;
-    border: 1px solid #ccc;
+    padding: .3em 1em;
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-family: $base-font-family;
+    color: $green;
+    border: none;
+    border-radius: 25px;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -190,7 +200,7 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-	padding: 3px;
+    padding: .3em 1em;
 }
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
@@ -427,4 +437,6 @@ object {
 }    
 
 @import "_partials/footer";
+
+@import "_partials/landing-page";
 

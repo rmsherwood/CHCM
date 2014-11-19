@@ -117,6 +117,12 @@ function cilantro_scripts() {
 		elseif (is_page_template('page-templates/home.php')) {
 	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/home.css');
 	}
+		elseif (is_page_template('page-templates/social.php')) {
+	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/social.css');
+	}	
+		elseif (is_page_template('page-templates/template-team.php')) {
+	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/team.css');
+	}	
 	else {
 	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/content-sidebar.css');
 	}
@@ -124,6 +130,10 @@ function cilantro_scripts() {
 	wp_enqueue_style('cilantro-google-fonts','http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic');
 
 	wp_enqueue_style('cilantro-font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+	wp_enqueue_script( 'cilantro-google-maps', esc_url_raw('https://maps.googleapis.com/maps/api/js'), array(), null );
+
+	wp_enqueue_script( 'cilantro-google-maps-settings', get_template_directory_uri() . '/js/google-maps.js', array(), '20141115', true );
 
 	wp_enqueue_script( 'cilantro-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20141104', true );
 
@@ -136,6 +146,7 @@ function cilantro_scripts() {
 	wp_enqueue_script( 'cilantro-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20141104', true );
 
 	wp_enqueue_script( 'cilantro-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20141104', true );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -167,3 +178,73 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+ * Register `team` post type
+ */
+function team_post_type() {
+   
+   // Labels
+	$labels = array(
+		'name' => _x("Team", "post type general name"),
+		'singular_name' => _x("Team", "post type singular name"),
+		'menu_name' => 'Team Profiles',
+		'add_new' => _x("Add New", "team item"),
+		'add_new_item' => __("Add New Profile"),
+		'edit_item' => __("Edit Profile"),
+		'new_item' => __("New Profile"),
+		'view_item' => __("View Profile"),
+		'search_items' => __("Search Profiles"),
+		'not_found' =>  __("No Profiles Found"),
+		'not_found_in_trash' => __("No Profiles Found in Trash"),
+		'parent_item_colon' => ''
+	);
+	
+	// Register post type
+	register_post_type('team' , array(
+		'labels' => $labels,
+		'public' => true,
+		'has_archive' => false,
+		'menu_icon' => get_stylesheet_directory_uri() . '/lib/TeamProfiles/team-icon.png',
+		'rewrite' => false,
+		'supports' => array('title', 'editor', 'thumbnail')
+	) );
+}
+add_action( 'init', 'team_post_type', 0 );
+
+/**
+ * Register `department` taxonomy
+ */
+function team_taxonomy() {
+	
+	// Labels
+	$singular = 'Department';
+	$plural = 'Departments';
+	$labels = array(
+		'name' => _x( $plural, "taxonomy general name"),
+		'singular_name' => _x( $singular, "taxonomy singular name"),
+		'search_items' =>  __("Search $singular"),
+		'all_items' => __("All $singular"),
+		'parent_item' => __("Parent $singular"),
+		'parent_item_colon' => __("Parent $singular:"),
+		'edit_item' => __("Edit $singular"),
+		'update_item' => __("Update $singular"),
+		'add_new_item' => __("Add New $singular"),
+		'new_item_name' => __("New $singular Name"),
+	);
+
+	// Register and attach to 'team' post type
+	register_taxonomy( strtolower($singular), 'team', array(
+		'public' => true,
+		'show_ui' => true,
+		'show_in_nav_menus' => true,
+		'hierarchical' => true,
+		'query_var' => true,
+		'rewrite' => false,
+		'labels' => $labels
+	) );
+}
+add_action( 'init', 'team_taxonomy', 0 );
+
+

@@ -1,7 +1,7 @@
 
 /*
 Theme Name: cilantro
-Layout: No sidebar
+Layout: home
 */
 
 .page .site-content { 
@@ -15,6 +15,8 @@ Layout: No sidebar
 }
 
 .entry-header,
+
+
 .page-header,
 .entry-content,
 .entry-footer,
@@ -48,7 +50,6 @@ Layout: No sidebar
 }
 
 #main{
-    padding-top: 3rem;
 }
 
 .site-branding{
@@ -113,6 +114,15 @@ Layout: No sidebar
     text-align: center;
 }
 
+@media screen and (max-width: 1190px) {
+    .core-item {
+        margin: 2rem auto;
+        float:none;
+        width:100%;
+    }
+}
+
+/*
 .core-item:first-child {
     margin-left: 0px;
 }
@@ -120,6 +130,7 @@ Layout: No sidebar
 .core-item:last-child {
     margin-right: 0px;
 }
+*/
 
 xcore-item:last-child:after  {
     content: "."; 

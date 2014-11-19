@@ -9,14 +9,13 @@
 ?>
 
 	</div><!-- #content -->
-
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
 		<?php get_sidebar('footer'); ?>
-
 		<div class="site-info">
-
+			<p>© 2014 Columbia Heights Marketplace</p>
 		</div><!-- .site-info -->
+		<?php cilantro_social_menu(); ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

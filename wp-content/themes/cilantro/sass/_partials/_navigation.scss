@@ -26,6 +26,20 @@ a:active {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
+nav h1{
+    display: inline;    
+    float:left;
+}
+nav h1.chcm-title a {
+    color: white;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-left:80px;
+    padding: 0.7em 0 0.6em 0; 
+}
+nav h1 a span{
+    font-weight: 500;
+}
 .main-navigation {
     position: relative;
     float: left;
@@ -38,6 +52,7 @@ a:active {
     background: $green-hsl;
 }
 .main-navigation ul {
+    float: right;
     list-style: none;
     margin: 0;
     padding-left: 0;
@@ -116,19 +131,46 @@ a:active {
 	cursor: pointer;
 	display: none;
 }
-@media screen and (max-width: 600px) {
-    .menu-toggle {
+
+@media screen and (max-width: 860px) {
+    nav h1{
+        float: none;
+        text-align: center;
+        
+    }
+
+    nav h1.chcm-title a{
+        border-bottom: 1px solid white;
+        margin: 0;
+    }
+
+    .main-navigation ul{
+        float: none;
+        margin-left: 80px;
+    }
+
+
+
+}
+@media screen and (max-width: 750px) {
+
+
+    button.menu-toggle {
             display: block;
             height: 3.75em;
             padding: 0 1em;
-            font-weight: normal;
+            font-weight: 500;
             font-size: 14px;
             font-size: 1.4rem;
             text-decoration: none;
             line-height: 3.75em;
             background: $green;
             color: white;
+            border: none;
 
+    }
+    button.menu-toggle:active, button.menu-toggle:focus, button.menu:hover{
+    border:none;
     }
         
     .main-navigation.toggled .nav-menu {
@@ -141,6 +183,8 @@ a:active {
     .main-navigation ul {
             display: none;
             padding-left: 0;
+            float:none;
+            margin-left: 0;
     }
         
     .main-navigation li { 
@@ -259,66 +303,4 @@ a:active {
 }
        
 
-/*  Social Menu */
 
-
-.menu-social ul {
-    float: right;
-    text-align: center;
-    list-style: none;    
-}
-
-.menu-social ul li {
-    position: relative;
-    display:  inline-block;    
-}
-
-.menu-social li a:before {
-    display: inline-block;
-    padding: 0 5px;
-    vertical-align: top;
-    font-family: 'Fontawesome';
-    font-size: 20px;
-    color: #fff;
-    -webkit-font-smoothing: antialiased;
-    content: '\f0c0';
-}
-
-.menu-social li a[href*="facebook.com"]::before { content: '\f09a'; }
-
-.menu-social li a[href*="twitter.com"]::before { content: '\f099'; }
-
-.menu-social li a[href*="dribbble.com"]::before { content: '\f17d'; }
-
-.menu-social li a[href*="plus.google.com"]::before { content: '\f0d5'; }
-
-.menu-social li a[href*="pinterest.com"]::before { content: '\f0d2'; }
-
-.menu-social li a[href*="github.com"]::before { content: '\f09b'; }
-
-.menu-social li a[href*="tumblr.com"]::before { content: '\f173'; }
-
-.menu-social li a[href*="youtube.com"]::before { content: '\f167'; }
-
-.menu-social li a[href*="flickr.com"]::before { content: '\f16e'; }
-
-.menu-social li a[href*="vimeo.com"]::before { content: '\f194'; }
-
-.menu-social li a[href*="instagram.com"]::before { content: '\f16d'; }
-
-.menu-social li a[href*="linkedin.com"]::before { content: '\f0e1'; }
-                    
-@media screen and (max-width: 600px) {
-    #menu-social ul {
-        position: absolute;
-        top: 0;
-        right: 6rem;
-        display: block;
-    }
-    
-    #menu-social li a { 
-        padding-left:.5em;
-        padding-right: .5em;
-    }
-}
-              

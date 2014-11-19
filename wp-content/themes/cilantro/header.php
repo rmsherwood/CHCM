@@ -22,15 +22,17 @@
 <div id="page" class="hfeed site">
 
 	<nav id="site-navigation" class="main-navigation" role="navigation">
+		<h1 class="chcm-title"><a href="<?php echo home_url(); ?>">Columbia Heights <span>Market Place</span></a></h1>
 		<button class="menu-toggle"><?php _e( 'Primary Menu', 'cilantro' ); ?></button>
-		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		
 		<div class="search-toggle">
 		    <i class="fa fa-search"></i>
 		    <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'cilantro' ); ?></a>
 		</div>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		
-		<?php cilantro_social_menu(); ?>
+		
+		
+	
 
 	</nav><!-- #site-navigation -->
 
