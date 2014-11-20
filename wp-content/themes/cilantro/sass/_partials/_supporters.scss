@@ -1,0 +1,60 @@
+/*_supporters.scss*/
+
+/*--------------------------------------------------------------
+XX - Supporters
+--------------------------------------------------------------*/
+
+#supporters-page{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 2rem 5.5%;
+}
+
+#supporter-list:after  {
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+}
+
+
+
+.supporter{
+    float:left;
+    width: 40%;
+    margin: 2rem 4rem 8rem 4rem;
+    text-align: center;
+}
+
+.supporter:nth-child(odd) {
+  clear: left;
+
+}
+
+.supporter p{
+    margin-bottom: 15px;
+}
+
+.supporter a{
+    color: $green;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+
+.supporter img{
+    display: block;
+    width: 100%;
+}
+
+@media screen and (max-width: 1190px) {
+    .supporter {
+        margin: 2rem auto 6rem auto;
+        float:none;
+        width:40%;
+    }
+
+
+
+}

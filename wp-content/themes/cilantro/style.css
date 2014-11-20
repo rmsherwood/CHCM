@@ -596,7 +596,7 @@ nav h1 a span {
   cursor: pointer;
   display: none; }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 1100px) {
   nav h1 {
     float: none;
     text-align: center; }
@@ -1035,8 +1035,8 @@ input[type="search"] {
 .entry-title {
   margin: 0 0 2rem;
   font-weight: 900;
-  font-size: 40px;
-  font-size: 4rem;
+  font-size: 30px;
+  font-size: 3rem;
   line-height: 1.3em;
   color: #000;
   color: black; }
@@ -1813,3 +1813,70 @@ ul#menu-social-icons {
 @media screen and (max-width: 320px) {
   .indent {
     margin: 0 2rem; } }
+/*_programs.scss*/
+/*--------------------------------------------------------------
+XX - Programs
+--------------------------------------------------------------*/
+#program-page {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 2rem 5.5%; }
+
+.program {
+  margin: 0 40px 80px 40px;
+  border-top: 3px solid #32b44a;
+  border-bottom: 1px solid #32b44a; }
+
+.program h2 {
+  padding: 10px 10px 5px 10px;
+  border-bottom: 2px dotted #32b44a; }
+
+.program p {
+  padding: 0px 10px; }
+
+.program blockquote {
+  margin: 0px 10px 20px 10px;
+  padding: 10px 0px  5px 0px; }
+
+/*_supporters.scss*/
+/*--------------------------------------------------------------
+XX - Supporters
+--------------------------------------------------------------*/
+#supporters-page {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 2rem 5.5%; }
+
+#supporter-list:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+.supporter {
+  float: left;
+  width: 40%;
+  margin: 2rem 4rem 8rem 4rem;
+  text-align: center; }
+
+.supporter:nth-child(odd) {
+  clear: left; }
+
+.supporter p {
+  margin-bottom: 15px; }
+
+.supporter a {
+  color: #32b44a;
+  text-decoration: none;
+  font-size: 3rem; }
+
+.supporter img {
+  display: block;
+  width: 100%; }
+
+@media screen and (max-width: 1190px) {
+  .supporter {
+    margin: 2rem auto 6rem auto;
+    float: none;
+    width: 40%; } }

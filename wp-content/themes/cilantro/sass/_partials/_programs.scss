@@ -1,0 +1,31 @@
+/*_programs.scss*/
+
+/*--------------------------------------------------------------
+XX - Programs
+--------------------------------------------------------------*/
+
+#program-page{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 2rem 5.5%;
+}
+
+.program{
+    margin: 0 40px 80px 40px;
+    border-top: 3px solid $green;
+    border-bottom: 1px solid $green;
+}
+
+.program h2{
+    padding: 10px 10px 5px 10px;
+    border-bottom: 2px dotted $green;
+}
+
+.program p{
+    padding: 0px 10px;
+}
+
+.program blockquote{
+    margin: 0px 10px 20px 10px;
+    padding: 10px 0px  5px 0px;
+}

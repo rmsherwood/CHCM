@@ -117,11 +117,17 @@ function cilantro_scripts() {
 		elseif (is_page_template('page-templates/home.php')) {
 	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/home.css');
 	}
+		elseif (is_page_template('page-templates/chcm-blank.php')) {
+	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/chcm-blank.css');
+	}
 		elseif (is_page_template('page-templates/social.php')) {
 	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/social.css');
 	}	
 		elseif (is_page_template('page-templates/template-team.php')) {
 	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/team.css');
+	}	
+		elseif (is_page_template('page-templates/template-vendor.php')) {
+	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/vendor.css');
 	}	
 	else {
 	    wp_enqueue_style( 'cilantro-layout-style' , get_template_directory_uri() . '/layouts/content-sidebar.css');
@@ -178,6 +184,41 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+ * Register `vendor` post type
+ */
+
+function vendor_post_type() {
+   
+   // Labels
+	$labels = array(
+		'name' => _x("Vendor", "post type general name"),
+		'singular_name' => _x("Vendor", "post type singular name"),
+		'menu_name' => 'Vendor Profiles',
+		'add_new' => _x("Add New", "vendor item"),
+		'add_new_item' => __("Add New Profile"),
+		'edit_item' => __("Edit Profile"),
+		'new_item' => __("New Profile"),
+		'view_item' => __("View Profile"),
+		'search_items' => __("Search Profiles"),
+		'not_found' =>  __("No Profiles Found"),
+		'not_found_in_trash' => __("No Profiles Found in Trash"),
+		'parent_item_colon' => ''
+	);
+	
+	// Register post type
+	register_post_type('vendor' , array(
+		'labels' => $labels,
+		'public' => true,
+		'has_archive' => false,
+		'menu_icon' => get_stylesheet_directory_uri() . '/lib/TeamProfiles/team-icon.png',
+		'rewrite' => false,
+		'supports' => array('title', 'editor', 'thumbnail')
+	) );
+}
+add_action( 'init', 'vendor_post_type', 0 );
 
 
 /**
@@ -246,5 +287,6 @@ function team_taxonomy() {
 	) );
 }
 add_action( 'init', 'team_taxonomy', 0 );
+
 
 
