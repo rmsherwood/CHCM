@@ -26,7 +26,7 @@ get_header(); ?>
 			?>
 			<section class="row profiles">
 				<div class="intro">
-					<h2>Meet The Team</h2>
+					<h2>Vendors</h2>
 					<p>The Columbia Heights farmers market features a wide variety of the best local farmers, small food businesses, and prepared food vendors. They are at the core of what we do, and we’d love for you to get to know them!</p>
 
 					<p><iframe src="//player.vimeo.com/video/106146346" width="640" height="360" frameborder="0" title="Pleitez Produce at the Columbia Heights farmers market" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>

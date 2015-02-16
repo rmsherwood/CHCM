@@ -16,18 +16,25 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+<script src="//use.typekit.net/rpk8lrn.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-
 	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<h1 class="chcm-title"><a href="<?php echo home_url(); ?>">Columbia Heights <span>Market Place</span></a></h1>
+		<h1 class="chcm-title"><a href="<?php echo home_url(); ?>">Columbia Heights<br/><span>Community Marketplace</span></a></h1>
 		<button class="menu-toggle"><?php _e( 'Primary Menu', 'cilantro' ); ?></button>
-		<div class="search-toggle">
-		    <i class="fa fa-search"></i>
-		    <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'cilantro' ); ?></a>
+		<div id="other-menu-items">
+			<div class="donate-button">
+				<a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=dwd6Pj7LpO6hy7SjMxLBw9oLwM9fdRfFTNw8D05qQfBAp5actJSizIyEl3W&dispatch=5885d80a13c0db1f8e263663d3faee8da8649a435e198e44a05ba053bc68d12e" alt="Donate to Columbia Heights Marketplace">DONATE NOW</i></a>
+			</div>
+			<div class="search-toggle">
+			    <i class="fa fa-search"></i>
+			    <a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'cilantro' ); ?></a>
+			</div>
 		</div>
+
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		
 		

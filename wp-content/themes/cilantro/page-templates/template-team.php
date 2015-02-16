@@ -77,8 +77,6 @@ $board_posts = get_posts( array(
 	<?php endforeach; ?>
 </section><!-- /.row -->
 <?php endif; ?>
-
-
 <?php if ( $team_posts ):
 ?>
 <section class="row profiles">

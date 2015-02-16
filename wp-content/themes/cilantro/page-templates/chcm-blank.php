@@ -1,9 +1,7 @@
 <?php
 /**
- * Template Name: Blank CHCM Page
- *
- * @package cilantro
- */
+* Template Name: Blank CHCM Page
+*/
 
 get_header(); ?>
 
@@ -25,5 +23,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<!-- <?php get_sidebar(); ?> -->
+
 <?php get_footer(); ?>

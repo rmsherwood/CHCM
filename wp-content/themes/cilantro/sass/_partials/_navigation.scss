@@ -50,6 +50,7 @@ nav h1 a span{
     text-transform: uppercase;
     background: $green;
     background: $green-hsl;
+    z-index: 999;
 }
 .main-navigation ul {
     float: right;
@@ -63,9 +64,9 @@ nav h1 a span{
 }
 .main-navigation a {
     display: block;
-    padding: 1.3em 1em;
-    font-size: 14px;
-    font-size: 1.4rem;
+    padding: 1.8em 1.6em;
+    font-size: 16px;
+    font-size: 1.6rem;
     text-decoration: none;
     line-height: 1.3em;
     color: white;

@@ -18,7 +18,7 @@
     background: hsla(0, 0%, 0%, .7);
 }  
 .site-branding {
-    padding: 6rem 0;
+    padding: 2rem 0;
     text-align: center;
     background: #2c86ba;
     background: hsl(202, 62%, 45%);
@@ -42,10 +42,9 @@
 .title-box {
     width: 600px;
     max-width: 75%;
-    padding: 4rem;
+    padding: 1.5rem 1rem;
     margin: 0 auto;
-    border: solid 1px #fff;
-    border: solid 1px hsla(0, 0%, 100%, .3);
+    border: none;
 }
                     
 .site-branding a { 
@@ -72,21 +71,26 @@
           
 
 
-
+/* Other Menu Items*/
+#other-menu-items{
+    float:right;
+    margin-left: 80px;
+    margin-right: 80px;
+}
 
 /* Header search */
 
 
 
 .search-toggle {
-    float: right;
-    width: 54px;
-    height: 54px;
-    padding: 12px;
-    margin-right: 80px;
+    float: left;
+    width: 78px;
+    height: 78px;
+    padding: 22px;
     color: #fff;
     text-align: center;
     cursor: pointer;
+    font-size: 1.2em;
 }
 
 .search-toggle:hover,
@@ -104,9 +108,12 @@
 @media screen and (max-width: 750px) {
     .search-toggle {
         position: absolute;
-        top: 53px;
+        top: 78px;
         right: 0;
         margin-right: 0;
+        width: 54px;
+        height: 54px;
+        padding: 12px;
     }
     .search-box{
         padding: 1em;
@@ -142,3 +149,67 @@ input[type="search"] {
 .search-box .search-submit { 
     display: none; 
 }
+
+/* Donation Options */
+
+/* Donation Button on Header */
+.donate-button {
+    float: left;
+    position: relative;
+
+}
+.donate-button a{
+    padding: 1.8em 1.6em;
+    font-size: 16px;
+    font-size: 1.6rem;
+    text-decoration: none;
+    line-height: 1.3em;
+    color: white;
+    color: hsl(0, 0%, 100%);
+    background-color: $donate-button;
+}
+
+.donate-button a:hover,
+.donate-button a.active {
+    background-color: $donate-button-hover;
+}
+
+
+@media screen and (max-width: 750px) {
+    .donate-button {
+        position: absolute;
+        top: 78px;
+        right: 54px;
+        margin-right: 0;
+        height: 3.75em;
+        padding-top: 1px;
+    }
+    .donate-button a{
+        padding: 1.94rem 1.6em;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+}
+
+
+/* Full page Donation bar at top */
+
+
+#donation-bar{
+    text-align: center;
+    padding: 0.5em 0;
+    background-color: #ff0000;
+}
+#donation-bar p{
+    margin: 0px;
+    color: #fff;
+}
+#donation-bar p a{
+    color: #fff;
+    font-weight: 600;
+}
+
+#donation-bar i{
+    margin: 0 20px;
+}
+
