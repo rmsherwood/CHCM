@@ -27,7 +27,10 @@
 		<button class="menu-toggle"><?php _e( 'Primary Menu', 'cilantro' ); ?></button>
 		<div id="other-menu-items">
 			<div class="donate-button">
-				<a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=dwd6Pj7LpO6hy7SjMxLBw9oLwM9fdRfFTNw8D05qQfBAp5actJSizIyEl3W&dispatch=5885d80a13c0db1f8e263663d3faee8da8649a435e198e44a05ba053bc68d12e" alt="Donate to Columbia Heights Marketplace">DONATE NOW</i></a>
+
+			</div>
+			<div class="donate-button">
+				<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W39U4N2ZG54TG" alt="Donate to Columbia Heights Marketplace">DONATE NOW</i></a>
 			</div>
 			<div class="search-toggle">
 			    <i class="fa fa-search"></i>
